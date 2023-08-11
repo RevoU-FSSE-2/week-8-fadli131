@@ -9,8 +9,10 @@ let products = [
 //   { id: 1, name: 'Product A', price: 10 },
 //   { id: 2, name: 'Product B', price: 20 },
 ];
+
 router.get('/products', (req, res) => {
-    res.json(products);
+    const sum = products.reduce((total, product) => total + product.price, 0);
+    res.json({ products, sum });
 });
 router.get('/products/:id', (req, res) => {
     const id = parseInt(req.params.id);
@@ -70,4 +72,10 @@ router.delete('/products/:id', (req, res) => {
         res.status(404).json({ message: 'Produk tidak ditemukan' });
     }
 });
+
+router.get('/calculate-sum', (req, res) => {
+    const sum = products.reduce((total, product) => total + product.price, 0);
+    res.json({ sum });
+});
+
 exports.default = router;
