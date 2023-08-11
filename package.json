@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "build": "tsc",
+        "build": "[my-framework] build --output public",
         "start": "node app.js",
         "watch": "concurrently \"npx tsc --watch\" \"nodemon -q app.js\""
     },
