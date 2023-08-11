@@ -22,7 +22,6 @@ Simple CRUD
 - package.json
 - package-lock.json
 - .gitignore
-- vercel.json
 
 ### Language used 
 - Javascript (NodeJS, Typscript, ExpressJS)
